@@ -1,0 +1,4 @@
+category: Accessibility Gnome
+requires: libdbus1_3 libdbus-glib_1_2 libgcc1 libglib2.0_0 libX11_6 libXtst6
+sdesc: "AT-SPI/D-Bus registry service"
+ldesc: "Next generation GNOME accessibility framework, based on D-Bus"
