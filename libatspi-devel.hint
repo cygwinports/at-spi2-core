@@ -1,0 +1,5 @@
+category: Gnome
+requires: libatspi0 libdbus1-devel libglib2.0-devel gettext libX11-devel
+external-source: at-spi2-core
+sdesc: "AT-SPI/D-Bus accessibility library (development)"
+ldesc: "Next generation GNOME accessibility framework, based on D-Bus"

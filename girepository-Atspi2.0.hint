@@ -1,0 +1,5 @@
+category: Gnome
+requires: libatspi0 girepository-GLib2.0
+external-source: at-spi2-core
+sdesc: "AT-SPI/D-Bus accessibility library (GObject Introspection data)"
+ldesc: "Next generation GNOME accessibility framework, based on D-Bus"

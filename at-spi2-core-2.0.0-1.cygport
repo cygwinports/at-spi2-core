@@ -1,0 +1,12 @@
+inherit gnome2
+
+
+PKG_NAMES="${PN} libatspi0 libatspi-devel girepository-Atspi2.0"
+at_spi2_core_CONTENTS="etc/ usr/lib/at-spi/ usr/share/dbus-1/ usr/share/doc/ usr/share/locale/"
+libatspi0_CONTENTS="usr/bin/cygatspi-0.dll"
+libatspi_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig usr/share/gtk-doc/"
+girepository_Atspi2_0_CONTENTS="usr/*/gir*/Atspi-2.0.*"
+
+DIFF_EXCLUDES="dbind-config.h"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/at-spi"
