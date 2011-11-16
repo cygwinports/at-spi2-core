@@ -1,6 +1,13 @@
 inherit gnome2
 
 
+DEPEND="gnome-common gtk-doc
+	girepository(GLib-2.0)
+	pkgconfig(dbus-1)
+	pkgconfig(glib-2.0)
+	pkgconfig(xi)
+	pkgconfig(xtst)"
+
 PKG_NAMES="${PN} libatspi0 libatspi-devel girepository-Atspi2.0"
 at_spi2_core_CONTENTS="etc/ usr/lib/at-spi/ usr/share/dbus-1/ usr/share/doc/ usr/share/locale/"
 libatspi0_CONTENTS="usr/bin/cygatspi-0.dll"
