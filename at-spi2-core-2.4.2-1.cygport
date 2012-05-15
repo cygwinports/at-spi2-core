@@ -17,3 +17,5 @@ girepository_Atspi2_0_CONTENTS="usr/*/gir*/Atspi-2.0.*"
 DIFF_EXCLUDES="dbind-config.h"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/at-spi"
+
+KEEP_LA_FILES="none"
