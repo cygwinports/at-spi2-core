@@ -1,16 +1,11 @@
 inherit gnome2
 
 NAME="at-spi2-core"
-VERSION=2.6.3
+VERSION=2.8.0
 RELEASE=1
-CATEGORY="GNOME"
-SUMMARY="AT-SPI/D-Bus registry service"
+CATEGORY="Libs"
+SUMMARY="AT-SPI/D-Bus accessibility library"
 DESCRIPTION="Next generation GNOME accessibility framework, based on D-Bus"
-
-PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/${NAME}.git/plain/use-gi-makefile.patch?h=f18
-	2.6.3-gtk-doc.patch
-"
 
 DEPEND="gnome-common gtk-doc
 	girepository(GLib-2.0)
@@ -19,17 +14,17 @@ DEPEND="gnome-common gtk-doc
 	pkgconfig(xi)
 	pkgconfig(xtst)"
 
-PKG_NAMES="${PN} libatspi0 libatspi-devel girepository-Atspi2.0"
-at_spi2_core_CONTENTS="etc/ usr/lib/at-spi/ usr/share/dbus-1/ usr/share/doc/ usr/share/locale/"
-libatspi0_SUMMARY="AT-SPI/D-Bus accessibility library (runtime)"
+PKG_NAMES="${NAME} libatspi0 libatspi-devel girepository-Atspi2.0"
+at_spi2_core_CATEGORY="X11"
+at_spi2_core_SUMMARY="AT-SPI/D-Bus registry service"
+at_spi2_core_CONTENTS="etc/ usr/libexec/ usr/share/dbus-1/ usr/share/doc/ usr/share/locale/"
+libatspi0_SUMMARY="${SUMMARY} (runtime)"
 libatspi0_REQUIRES="at-spi2-core"
 libatspi0_CONTENTS="usr/bin/cygatspi-0.dll"
-libatspi_devel_SUMMARY="AT-SPI/D-Bus accessibility library (development)"
+libatspi_devel_SUMMARY="${SUMMARY} (development)"
 libatspi_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig usr/share/gtk-doc/"
-girepository_Atspi2_0_SUMMARY="AT-SPI/D-Bus accessibility library (GObject Introspection)"
+girepository_Atspi2_0_SUMMARY="${SUMMARY} (GObject Introspection)"
 girepository_Atspi2_0_CONTENTS="usr/*/gir*/Atspi-2.0.*"
 
 DIFF_EXCLUDES="dbind-config.h"
 DISTCLEANFILES="doc/libatspi/html/*"
-
-CYGCONF_ARGS="--libexecdir=/usr/lib/at-spi"
