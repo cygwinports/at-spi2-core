@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="at-spi2-core"
-VERSION=2.10.2
+VERSION=2.14.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="AT-SPI/D-Bus accessibility library"
