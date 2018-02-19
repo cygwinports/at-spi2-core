@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="at-spi2-core"
-VERSION=2.24.1
+VERSION=2.26.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="AT-SPI/D-Bus accessibility library"
@@ -29,6 +29,7 @@ libatspi_doc_SUMMARY="${SUMMARY} (API docs)"
 libatspi_doc_CONTENTS="usr/share/gtk-doc/"
 girepository_Atspi2_0_SUMMARY="${SUMMARY} (GObject Introspection)"
 girepository_Atspi2_0_CONTENTS="usr/*/gir*/Atspi-2.0.*"
+PKG_IGNORE="usr/lib/systemd/"
 
 DIFF_EXCLUDES="dbind-config.h"
 DISTCLEANFILES="doc/libatspi/html/*"
